@@ -2,7 +2,8 @@ const authPath = require('./config/auth0');
 const request = require('request');
 const User = require('./app/models/users');
 const watson = require('watson-developer-cloud/personality-insights/v3');
-const personality_insights = new watson(require("./config/api").WATSON);
+const watsonInfo = process.env.api || require("./config/api");
+const personality_insights = new watson(watsonInfo.WATSON);
 
 
 //handles the Auth0 flow for getting an external api access key (in this case Facebook)

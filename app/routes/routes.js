@@ -5,8 +5,8 @@ var Event = require('../models/events');
 // import dependencies
 var request = require('request');
 // import API keys
-var authPath = require('../../config/auth0');
-var api = require('../../config/api.js');
+var authPath = process.env.auth0 || require('../../config/auth0');
+var api = process.env.api || require('../../config/api.js');
 var Promise = require('bluebird');
 const db = require('../../config/db');
 const ObjectId = require('mongoose').Types.ObjectId;
