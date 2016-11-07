@@ -39,7 +39,6 @@ const getUserAccessKeys = function(userId) {
                     console.log("error", err);
                     reject(err);
                 }
-                console.log(JSON.parse(response.body));
 
                 let fbAccessKey = JSON.parse(response.body).identities[0].access_token;
                 resolve(JSON.parse(response.body).identities);
