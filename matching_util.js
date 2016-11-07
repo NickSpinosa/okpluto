@@ -1,3 +1,5 @@
+'use strict';
+
 const authPath = require('./config/auth0');
 const request = require('request');
 const User = require('./app/models/users');
