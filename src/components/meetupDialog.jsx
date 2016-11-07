@@ -14,7 +14,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import Dialog from 'material-ui/Dialog';
 import MeetupCreation from './meetupCreation.jsx';
-// import ChatCreation from './chatCreation.jsx';
 import Snackbar from 'material-ui/Snackbar';
 import * as Colors from 'material-ui/styles/colors';
 //Services

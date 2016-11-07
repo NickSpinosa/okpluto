@@ -11,7 +11,6 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import Dialog from 'material-ui/Dialog';
 import MeetupCreation from './meetupCreation.jsx';
-import ChatCreation from './chatCreation.jsx';
 import Snackbar from 'material-ui/Snackbar';
 import * as Colors from 'material-ui/styles/colors';
 //Services
@@ -35,6 +34,7 @@ class ChatDialog extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleInputMessage = this.handleInputMessage.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleOpen = this.handleOpen.bind(this);
     // this.handleOpenChat = this.handleOpenChat.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -114,10 +114,20 @@ class ChatDialog extends React.Component {
     console.log('handledChange, new state.inputMessage',this.state.inputMessage);
   }
 
+  handleKeyPress(e){
+    console.log(e);
+    if(e.charCode === 13){
+      //handle return key 
+      this.handleSubmit();
+    } 
+  }
+
   handleInputMessage(e){
     var message = e.target.value;
     console.log('event message in handleinputmessage',message); 
+    //update with new message
     this.handleChange('inputMessage',message);
+    
   }
 
   render() {
@@ -126,6 +136,7 @@ class ChatDialog extends React.Component {
         hintText="Message"
         value = {this.state.inputMessage} 
         onChange = {this.handleInputMessage}
+        onKeyPress={this.handleKeyPress}
       />,
       <FlatButton
         label="Close"
