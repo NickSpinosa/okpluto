@@ -17,6 +17,10 @@ const googleMaps = require('@google/maps').createClient({
 });
 module.exports = function(app) {
 
+	app.get("/api/shareKeys", (req, res) => {
+		res.status(200).send(authPath);
+	});
+
 	//======Location End Points=======//
 
 	//Find Latitude and Longitude of an address / location
