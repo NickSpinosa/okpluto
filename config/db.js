@@ -3,9 +3,10 @@
 */
 
 'use strict';
+const dbUrl = process.env.url || 'mongodb://localhost/okplutodb'
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/okplutodb');
+mongoose.connect(dbUrl);
 
 var db = mongoose.connection;
 
