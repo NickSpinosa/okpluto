@@ -97,6 +97,26 @@ class Home extends React.Component {
 
         <div className='team'>
           <div className='row'>
+           <TeamIcon
+              url={"https://avatars3.githubusercontent.com/u/18623212?v=3&s=275"}
+              display={'Nick Spinosa'}
+              link={"https://www.linkedin.com/in/nicholas-spinosa-65193311a"}
+            />
+            <TeamIcon
+              url={"https://avatars2.githubusercontent.com/u/14083293?v=3&s=275"}
+              display={'Justin Roche'}
+              link={"https://www.linkedin.com/in/justin-roche-a70263127"}
+            />
+            <TeamIcon
+              url={"https://avatars3.githubusercontent.com/u/2206529?v=3&s=275"}
+              display={'Andrew Cernek'}
+              link={"https://www.linkedin.com/in/andrewcernek"}
+            />
+            <TeamIcon
+              url={"https://avatars1.githubusercontent.com/u/19276317?v=3&s=275"}
+              display={'Aaron Stevens'}
+              link={"https://www.linkedin.com/in/aaron-stevens-565636129"}
+            />
             <TeamIcon
               url={Daisy}
               display={'Daisy Good'}
