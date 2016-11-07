@@ -85,7 +85,8 @@ class UserDisplay extends React.Component {
       <div>
         <Card>
           <CardMedia>
-            <input type="checkbox" checked={this.state.isLiked} onChange={this.handleChange} />
+            <input id={"input_" + this.props.user._id} className="input-like" type="checkbox" checked={this.state.isLiked} onChange={this.handleChange} />
+						<label htmlFor={"input_" + this.props.user._id}><i className="fa fa-heart"></i></label>
             <img src={this.props.user.picLink || this.props.user.profilepic} className="card-img" alt="Pic"/>
           </CardMedia>
 
