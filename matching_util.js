@@ -1,7 +1,7 @@
 'use strict';
 
 
-const authPath = process.env.auth0 || require('./config/auth0');
+const authPath = process.env.auth0 ? JSON.parse(process.env.auth0) : require('./config/auth0');
 const request = require('request');
 const User = require('./app/models/users');
 const watson = require('watson-developer-cloud/personality-insights/v3');
