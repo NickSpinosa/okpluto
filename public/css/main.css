@@ -278,3 +278,9 @@ input.input-like + label i {
 input.input-like:checked + label i {
   color: red;
 }
+
+.dog-image {
+  width: 75px;
+  height: 75px;
+  margin-top: 15px;
+}

@@ -35,9 +35,15 @@ import { getInfo } from './utils/communication.js';
 getInfo().then(authPath => {
   // Setting up auth service
   console.log("auth", authPath);
-  console.log("parsed auth", JSON.parse(authPath));
+  //console.log("parsed auth", JSON.parse(authPath));
 
-  let parsedAuthPath = JSON.parse(authPath);
+  let parsedAuthPath;
+
+  if(typeof authPath === 'string') {
+    parsedAuthPath = JSON.parse(authPath);
+  } else {
+    parsedAuthPath = authPath;
+  }
 
   const auth = new AuthService(parsedAuthPath.AUTH0_CLIENT_ID, parsedAuthPath.AUTH0_DOMAIN);
   // check for authenication in all protected routes

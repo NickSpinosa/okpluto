@@ -65,12 +65,12 @@ class UserDisplay extends React.Component {
     if(this.analyzeBreeds(this.props.user.dogBreed)){
       //display a badmatch image
       return(
-        <img src={'http://i.imgur.com/2p5IkLM.jpg'} />
+        <img className={"dog-image"} src={'http://i.imgur.com/2p5IkLM.jpg'} />
       )
     }
     //display a good match image
     return(
-      <img src={'https://s3.amazonaws.com/kandipatternspatterns/characters/20542_courage-the-cowardly-dog-i-have-a-bad-feeling-about-this-.png'} />
+      <img className={"dog-image"} src={'https://s3.amazonaws.com/kandipatternspatterns/characters/20542_courage-the-cowardly-dog-i-have-a-bad-feeling-about-this-.png'} />
     )
   }
 
