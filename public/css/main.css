@@ -251,3 +251,30 @@ img {
 .img-circle {
   cursor: pointer;
 }
+
+input.input-like {
+  display: none;
+}
+
+input.input-like + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+input.input-like + label i {
+    margin: 0 0 0 6px;
+    line-height: 48px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+/*&:hover {
+  i {
+    color: $grey75;
+  }
+}*/
+input.input-like:checked + label i {
+  color: red;
+}
