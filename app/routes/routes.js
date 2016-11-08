@@ -5,7 +5,7 @@ var Event = require('../models/events');
 // import dependencies
 var request = require('request');
 // import API keys
-var authPath = process.env.auth0 || require('../../config/auth0');
+var authPath = JSON.parse(process.env.auth0) || require('../../config/auth0');
 var api = process.env.api || require('../../config/api.js');
 var Promise = require('bluebird');
 const db = require('../../config/db');
