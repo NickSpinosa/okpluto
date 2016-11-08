@@ -41,6 +41,10 @@ class UserDisplay extends React.Component {
 
 
   formatBreedName(breed){
+    if(!breed) {
+      return '';
+    }
+
     return breed.split(" ")
       .map((word) => {
         return word.toLowerCase();
