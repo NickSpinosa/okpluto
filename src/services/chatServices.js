@@ -3,7 +3,7 @@
 var socket = null;
 
 const createSocket = function() {
-  socket = io.connect('http://localhost:8080');
+  socket = io.connect('/');
   
   socket.on('connect', function(data) {
     var dbId = localStorage.getItem('mongoUserId');
