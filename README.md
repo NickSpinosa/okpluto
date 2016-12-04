@@ -4,9 +4,9 @@
 
 ## Team
 
-  - __Product Owner__: Daisy Good
-  - __Scrum Master__: Ivey Topaz
-  - __Development Team Members__: Kat Gurdak, Jarrett Kennedy
+  - __Product Owner__: Aaron Stevens
+  - __Scrum Master__: Nicholas Spinosa
+  - __Development Team Members__: Justin Roche, Andrew Cernek
 
 ## Table of Contents
 
